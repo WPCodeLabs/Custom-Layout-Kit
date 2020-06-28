@@ -1,0 +1,832 @@
+[
+    {
+        "key": "group_5ef23d6cde69d",
+        "title": "Layout Settings",
+        "fields": [
+            {
+                "key": "field_5ef51f735faad",
+                "label": "Placement",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5ef23d6ce5bb4",
+                "label": "Action",
+                "name": "clk_action",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "66",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": [],
+                "default_value": false,
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "value",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5ef23d6ce5bbd",
+                "label": "Priority",
+                "name": "clk_priority",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 10,
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": 1,
+                "max": "",
+                "step": 1
+            },
+            {
+                "key": "field_5ef23e353dc05",
+                "label": "Display On",
+                "name": "clk_inclusion_rules",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5ef23e533dc06",
+                "min": 1,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Add Group",
+                "sub_fields": [
+                    {
+                        "key": "field_5ef23e533dc06",
+                        "label": "",
+                        "name": "clk_rule_group",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "clk_flex_row",
+                            "id": ""
+                        },
+                        "collapsed": "",
+                        "min": 1,
+                        "max": 0,
+                        "layout": "block",
+                        "button_label": "AND",
+                        "sub_fields": [
+                            {
+                                "key": "field_5ef23d6d004fe",
+                                "label": "View",
+                                "name": "clk_view",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "all": "Entire Website",
+                                    "frontpage": "Front Page",
+                                    "blog": "Blog Page",
+                                    "404": "404 Page",
+                                    "search": "Search Results",
+                                    "singular": "Singular",
+                                    "archive": "Archive",
+                                    "user": "User Role",
+                                    "single": "Individual Posts"
+                                },
+                                "default_value": false,
+                                "allow_null": 1,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef23d6d00529",
+                                "label": "Condition",
+                                "name": "clk_archive_condition",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d004fe",
+                                            "operator": "==",
+                                            "value": "archive"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "term": "Term Archive",
+                                    "post_type": "Post Type Archive",
+                                    "author": "Author Archive",
+                                    "date": "Date Archive"
+                                },
+                                "default_value": false,
+                                "allow_null": 1,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef23d6d0053f",
+                                "label": "Condition",
+                                "name": "clk_singular_condition",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d004fe",
+                                            "operator": "==",
+                                            "value": "singular"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "term": "Term",
+                                    "post_type": "Post Type",
+                                    "author": "Author",
+                                    "template": "Page Template"
+                                },
+                                "default_value": false,
+                                "allow_null": 1,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef23d6d00585",
+                                "label": "Terms",
+                                "name": "clk_terms",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d00529",
+                                            "operator": "==",
+                                            "value": "term"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d0053f",
+                                            "operator": "==",
+                                            "value": "term"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 1,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef23d6d0059a",
+                                "label": "Post Type",
+                                "name": "clk_post_type",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d00529",
+                                            "operator": "==",
+                                            "value": "post_type"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d0053f",
+                                            "operator": "==",
+                                            "value": "post_type"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 1,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef23d6d005b5",
+                                "label": "User Role",
+                                "name": "clk_user_role",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d004fe",
+                                            "operator": "==",
+                                            "value": "user"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 1,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef23d6d005a3",
+                                "label": "Page Template",
+                                "name": "clk_page_template",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d0053f",
+                                            "operator": "==",
+                                            "value": "template"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef23d6d005ac",
+                                "label": "Author",
+                                "name": "clk_author",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d00529",
+                                            "operator": "==",
+                                            "value": "author"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d0053f",
+                                            "operator": "==",
+                                            "value": "author"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 1,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef23d6d0055b",
+                                "label": "Posts",
+                                "name": "clk_posts",
+                                "type": "relationship",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef23d6d004fe",
+                                            "operator": "==",
+                                            "value": "single"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "post_type": "",
+                                "taxonomy": "",
+                                "filters": [
+                                    "search",
+                                    "post_type"
+                                ],
+                                "elements": "",
+                                "min": "",
+                                "max": "",
+                                "return_format": "id"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "field_5ef266d89f764",
+                "label": "Hide On",
+                "name": "clk_exclusion_rules",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 1,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Add Group",
+                "sub_fields": [
+                    {
+                        "key": "field_5ef266d89f765",
+                        "label": "",
+                        "name": "clk_rule_group",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "clk_flex_row",
+                            "id": ""
+                        },
+                        "collapsed": "",
+                        "min": 1,
+                        "max": 0,
+                        "layout": "block",
+                        "button_label": "AND",
+                        "sub_fields": [
+                            {
+                                "key": "field_5ef266d89f766",
+                                "label": "View",
+                                "name": "clk_view",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "all": "Entire Website",
+                                    "frontpage": "Front Page",
+                                    "blog": "Blog Page",
+                                    "404": "404 Page",
+                                    "search": "Search Results",
+                                    "singular": "Singular",
+                                    "archive": "Archive",
+                                    "user": "User Role",
+                                    "single": "Individual Posts"
+                                },
+                                "default_value": false,
+                                "allow_null": 1,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef266d89f767",
+                                "label": "Condition",
+                                "name": "clk_archive_condition",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f766",
+                                            "operator": "==",
+                                            "value": "archive"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "term": "Term Archive",
+                                    "post_type": "Post Type Archive",
+                                    "author": "Author Archive",
+                                    "date": "Date Archive"
+                                },
+                                "default_value": false,
+                                "allow_null": 1,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef266d89f768",
+                                "label": "Condition",
+                                "name": "clk_singular_condition",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f766",
+                                            "operator": "==",
+                                            "value": "singular"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "term": "Term",
+                                    "post_type": "Post Type",
+                                    "author": "Author",
+                                    "template": "Page Template"
+                                },
+                                "default_value": false,
+                                "allow_null": 1,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef266d89f769",
+                                "label": "Terms",
+                                "name": "clk_terms",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f767",
+                                            "operator": "==",
+                                            "value": "term"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f768",
+                                            "operator": "==",
+                                            "value": "term"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 1,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef266d89f76a",
+                                "label": "Post Type",
+                                "name": "clk_post_type",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f767",
+                                            "operator": "==",
+                                            "value": "post_type"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f768",
+                                            "operator": "==",
+                                            "value": "post_type"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 1,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef266d89f76b",
+                                "label": "User Role",
+                                "name": "clk_user_role",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f766",
+                                            "operator": "==",
+                                            "value": "user"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 1,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef266d89f76c",
+                                "label": "Page Template",
+                                "name": "clk_page_template",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f768",
+                                            "operator": "==",
+                                            "value": "template"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef266d89f76d",
+                                "label": "Author",
+                                "name": "clk_author",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f767",
+                                            "operator": "==",
+                                            "value": "author"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f768",
+                                            "operator": "==",
+                                            "value": "author"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": [],
+                                "default_value": [],
+                                "allow_null": 1,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ef266d89f76e",
+                                "label": "Posts",
+                                "name": "clk_posts",
+                                "type": "relationship",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5ef266d89f766",
+                                            "operator": "==",
+                                            "value": "single"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "post_type": "",
+                                "taxonomy": "",
+                                "filters": [
+                                    "search",
+                                    "post_type"
+                                ],
+                                "elements": "",
+                                "min": "",
+                                "max": "",
+                                "return_format": "id"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "field_5ef51fd508a22",
+                "label": "Options",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5ef23d6ce5bc5",
+                "label": "Remove Other Actions",
+                "name": "clk_remove_actions",
+                "type": "true_false",
+                "instructions": "Removes other actions form the hook, <strong>only<\/strong> rendering this layout. <strong>Potentially Unsafe for some themes\/hooks.<\/strong>",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Remove <strong>all<\/strong> other actions",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "On",
+                "ui_off_text": "Off"
+            },
+            {
+                "key": "field_5ef2cf36739d3",
+                "label": "Edit Inline",
+                "name": "clk_edit_inline",
+                "type": "true_false",
+                "instructions": "Attempt to render the editor at the chosen placement hook. <strong>Note:<\/strong> only applies if using a supported front-end builder, such Beaver Builder or Elementor.\r\n\r\nIf you are unable to edit your layout because the editor is not appearing, disable this option.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Edit Inline",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "On",
+                "ui_off_text": "Off"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "custom-layout"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

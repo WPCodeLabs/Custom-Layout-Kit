@@ -1,0 +1,51 @@
+.select2-container--default .select2-results__option[aria-selected=true] {
+	display: none;
+}
+
+.clk_flex_row {
+	tr.acf-row {
+		td.acf-fields {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			.acf-field {
+				flex: 1;
+			}
+		}
+		&:first-of-type {
+			td.remove {
+				.acf-icon.-minus {
+					display: none;
+				}
+			}
+		}
+	}
+	.acf-rel-item {
+		word-break: break-all;
+	}
+}
+
+#acf-clk_layout_settings {
+	@media only screen and (min-width: 768px) {
+		.ruleset_repeater {
+			tr.acf-row {
+				td.acf-fields {
+					display: flex;
+					flex-direction: row;
+					width: 100%;
+					.acf-field {
+						flex: 1;
+					}
+				}
+				&:first-of-type {
+					td.remove {
+						.acf-icon.-minus {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

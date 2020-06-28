@@ -1,0 +1,4 @@
+*/assets/css/*.css merge=ours
+*.css.map merge=ours
+*/assets/js/*.js merge=ours
+*.js.map merge=ours
