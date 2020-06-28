@@ -43,6 +43,8 @@ config.codekit
 # dev dependencies #
 ####################
 node_modules
+package-lock.json
+yarn-lock.json
 # Other #
 ####################
 vendor/acf
